@@ -19,9 +19,11 @@ function App() {
     
     try
     {
+
       const response = await api.get("/api/v1/movies");
 
       setMovies(response.data);
+
     } 
     catch(err)
     {
@@ -40,11 +42,14 @@ function App() {
         setMovie(singleMovie);
 
         setReviews(singleMovie.reviews);
+        
+
     } 
     catch (error) 
     {
       console.error(error);
     }
+
   }
 
   useEffect(() => {
